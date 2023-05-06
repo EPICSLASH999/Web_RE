@@ -1,0 +1,231 @@
+header{ /* Where Nav is located*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background: transparent;*/
+    background: var(--semi-transparent);
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+
+.logo{ 
+    display: flex;
+    align-items: center;
+}
+.logo i{ /* Icon of the Logo*/
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+.logo span{ /* Name of the Logo */
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+}
+
+/* This is for Dropdown Navbar Elements */
+.navbar li{
+    position: relative;
+    float: left;
+}
+.navbar li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    /*background: var(--semi-transparent);*/
+    display: none;
+
+    padding-top: 21px;
+}
+.navbar li ul li{
+    width: 100%;
+    /*border-bottom: 1px solid rgb(77, 9, 40);*/
+    border-top: 1px solid rgb(77, 9, 40);
+
+    background: var(--semi-transparent);
+}
+.navbar li ul li ul{
+    left: 200px;
+    top: 0;
+}
+.navbar li:focus-within > ul,
+.navbar li:hover > ul{
+    display: initial;
+}
+/* ------------------------------------ */
+
+.navbar li a{ /* For each word (a href) of the nav*/
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+
+    position: relative;
+    text-decoration: none;
+
+    display: block; 
+}
+
+/* This is to make the animated-line of the navbar */
+.navbar li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--main-color);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navbar li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* -------------------------------------- */ 
+.navbar li a:hover{
+    color: var(--main-color);
+}
+.navbar li a.active{
+    color: var(--main-color);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+/* Button of navbar */
+.main .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    /*margin-left: 40px;*/
+    transition: .5s;
+
+    justify-content: center;
+    margin-right: 25px;
+}
+.main .btnLogin-popup:hover{
+    background: #fff;
+    color: #222327;
+}
+.main .btnLogin-popup i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+/* ---------------- */
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* This is to make it responsive */
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+@media (max-width: 1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar li a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar li a:hover{
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+    .navbar li a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+    /* Portion of the dropdown */
+    .navbar li{
+        width: 100%;;
+    }
+    .navbar li ul{
+        position: relative;
+        width: 100%;
+    }
+    .navbar li ul li{
+        background: var(--main-color);
+        border-bottom: none;
+        border-top: none;
+        padding-left: 10%;
+    }
+    .navbar li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    /* ----------------------- */
+}
+/* ----------------------------- */

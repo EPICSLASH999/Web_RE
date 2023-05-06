@@ -1,0 +1,62 @@
+:root{ /* Global Variables for all stylesheets*/
+    --text-color: #fff;
+    --normal-text-color: #222327;
+    --a-text-color: #c5b3b1;
+    --main-color: #c32865;
+
+    --bg-color: #222327;
+    --semi-transparent: #13101152;
+    /*--semi-transparent2: #1b1819c7;*/
+    --or-color: #b67c26;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    /*background: url(../img/background.jpg) no-repeat;*/
+    /*background: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;*/
+    color: var(--text-color);
+
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+/* ---------------   */
+/* THE SECTIONS PART */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f242d;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+}
+
+section:nth-child(odd) { 
+    /* This is to intercalate diferent background colors among sections*/
+    background: #323946;
+}
+
+/* This is specifically for the section with the class "sectionhome" */
+.sectionhome{
+    font-size: 1em;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
