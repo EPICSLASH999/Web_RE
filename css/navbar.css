@@ -144,11 +144,11 @@ header{ /* Where Nav is located*/
     margin-right: 7px;
 }
 /* ---------------- */
-.user{
+.games{
     display: flex;
     align-items: center;
 }
-.user i{
+.games i{
     color: var(--main-color);
     font-size: 28px;
     margin-right: 7px;
@@ -185,7 +185,7 @@ header{ /* Where Nav is located*/
         right: -100%;
         width: 270px;
         height: 29vh;
-        background: var(--main-color);
+        /*background: var(--main-color);*/
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -197,6 +197,9 @@ header{ /* Where Nav is located*/
         margin: 12px 0;
         padding: 0px 25px;
         transition: all .50s ease;
+        
+        background: var(--main-color);
+        padding: 2%;
     }
     .navbar li a:hover{
         color: var(--text-color);
@@ -228,4 +231,71 @@ header{ /* Where Nav is located*/
     }
     /* ----------------------- */
 }
+/* FOR CELLPHONES */
+/* MY CELLPHONE IS: 394px (width)*/
+@media (max-width: 520px){
+    header{
+        justify-content:space-between;
+    }
+    .games i{
+        font-size: 16px;
+    }
+    .logo i{ /* Icon of the Logo*/
+        font-size: 15px;
+    }
+    .logo span{ /* Name of the Logo */
+        color: var(--text-color);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .main a{
+        margin-right: 15px;
+        margin-left: 8px;
+        font-size: 0.7rem;
+    }
+    .main .btnLogin-popup{
+        width: 85px;
+        height: 28px;
+        
+        font-size: 0.7em;
+    }
+    .main .btnLogin-popup i{
+        font-size: 11px;
+    }
+    .navbar li a{ /* For each word (a href) of the nav*/
+        
+        font-size: 0.8rem;
+        margin-left: 70%;
+    }
+    .navbar li ul li{
+        background-color: transparent;
+    }
+    .navbar li ul li a{
+        background-color: #6b1638d2;
+    }
+}
 /* ----------------------------- */
+
+/* For Image User */
+.user_container{
+
+    flex:1;
+	max-width:350px;
+	padding:5px;
+	display:flex;
+	align-items: center;
+
+}
+
+.user_container .user_container_name{
+    top: 40px;
+}
+
+.user_container_image{
+    
+	margin-right:5px;
+	width: 40px;
+	height:40px;
+	object-fit:cover;
+	border-radius: 50%;
+}

@@ -109,3 +109,31 @@ th {
     font-size: 1em;
     color: var(--a-text-color);
 }
+
+@media only screen and (max-width: 1000px) {
+    .container{
+        width: 75%;
+    
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 75%;
+        height: 500px;
+    }
+    .container h2{
+        font-size: 1.6em;
+    }
+    .input-box{
+        width: 75%;
+        font-size: small;
+        height: 7.5%;
+    }
+    .searchres{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+    }
+}

@@ -1,27 +1,5 @@
-:root{ /* Global Variables for all stylesheets*/
-    --text-color: #fff;
-    --normal-text-color: #222327;
-    --a-text-color: #c5b3b1;
-    --main-color: #c32865;
-
-    --bg-color: #222327;
-    --semi-transparent: #13101152;
-    /*--semi-transparent2: #1b1819c7;*/
-    --or-color: #b67c26;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-
-    text-decoration: none;
-    list-style: none;
-}
-
 body{
+    width: 100%;
     min-height: 100vh;
     background: var(--bg-color);
     /*background: url(../img/background.jpg) no-repeat;*/
@@ -48,7 +26,7 @@ section {
     font-weight: 700;
 }
 
-section:nth-child(odd) { 
+section:nth-child(even) { 
     /* This is to intercalate diferent background colors among sections*/
     background: #323946;
 }

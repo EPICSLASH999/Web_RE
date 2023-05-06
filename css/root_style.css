@@ -1,0 +1,24 @@
+:root{ /* Global Variables for all stylesheets*/
+    --text-color: #fff;
+    --normal-text-color: #222327;
+    --a-text-color: #c5b3b1;
+    --main-color: #c32865;
+
+    --main-color2: #db80a4d2;
+
+    --bg-color: #222327;
+    --semi-transparent: #13101152;
+    /*--semi-transparent2: #1b1819c7;*/
+    --or-color: #b67c26;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}

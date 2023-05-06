@@ -1,5 +1,11 @@
-.wrapper{
+.divLogin{
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    position: fixed;
     width: 400px;
     height: 440px; /* Height of the login form */
     background: transparent;
@@ -13,8 +19,10 @@
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
-}
 
+    top: 25%;
+}
+ 
 .wrapper.active-popup{
     transform: scale(1);
 }
@@ -69,6 +77,7 @@
 .form-box h2{
     font-size: 2em;
     color: var(--text-color);
+    /*color: #640e2f;*/
     text-align: center;
 }
 
@@ -187,4 +196,10 @@
 
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 520px){
+    .wrapper{
+        width: 85%;
+    }
 }
