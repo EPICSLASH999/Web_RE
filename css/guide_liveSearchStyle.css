@@ -1,0 +1,111 @@
+:root{ /* Global Variables for all stylesheets*/
+    --text-color: #fff;
+    --normal-text-color: #222327;
+    --a-text-color: #c5b3b1;
+    --main-color: #c32865;
+
+    --bg-color: #222327;
+    --semi-transparent2: #705c6352;
+    --semi-transparent: #1b1819c7;
+    --or-color: #b67c26;
+}
+
+/*body{
+    min-height: 100vh;
+    background: url(../img/search3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.container{
+    position: relative;
+    width: 850px;
+    height: 440px; 
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    /*transform: scale(0);*/
+
+}
+
+.container h2{
+    font-size: 2em;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-box{
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: var(--semi-transparent);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 200;
+    padding: 0 35px 0 5px;
+
+    position: absolute;
+    left: 35px;
+}
+
+.searchres{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchres table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 10%;
+}
+
+.searchres table, td, th {
+    border: 1px solid var(--normal-text-color);
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+.searchres h6 {
+    position: relative;
+    align-items: center;
+    
+    text-align: center;
+    font-size: 1em;
+    color: var(--a-text-color);
+}
