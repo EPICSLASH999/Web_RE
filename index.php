@@ -24,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/login_register.css?v1">
         <link rel="stylesheet" type="text/css" href="css/scrollBar.css">
+        <link rel="stylesheet" type="text/css" href="css/popup.css">
         
         <!-- Icons -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
@@ -39,10 +40,11 @@
     
     <body>
         <?php include('feature_navbar.inc.php') ?> 
-
+        
         <!-- START OF SECTIONS -->
         <section id="home" class="sectionhome">
             <?php include('feature_login&register.inc.php') ?>
+            <?php include('feature_popup.inc.php') ?> 
         </section>
         <section id="news" class="sectionlastnews">Last News</section>
         <section id="faq" class="sectionfaq">FAQ</section>

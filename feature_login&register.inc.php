@@ -167,10 +167,18 @@
                     if(ajax.status == 200){
 
                         let obj = JSON.parse(ajax.responseText);
-                        alert(obj.message);
+                        
+                        if(!obj.success){
+                            setPopup(2, obj.message);
+                        } else{
+                            //alert(obj.message);
+                        }
+                        
 
                         if(obj.success)
                             window.location.reload();
+
+                        
                     }else{
                         alert("Please check your internet connection");
                     }
@@ -217,10 +225,16 @@
 
                         //console.log(ajax.responseText);
                         let obj = JSON.parse(ajax.responseText);
-                        alert(obj.message);
+                        if(!obj.success){
+                            setPopup(2, obj.message);
+                        } else{
+                            //alert(obj.message);
+                        }
 
                         if(obj.success)
                             window.location.reload();
+
+                        
                     }else{
                         alert("Please check your internet connection");
                     }

@@ -64,7 +64,7 @@
 				{
 					if(ajax.status == 200){
 						let obj = JSON.parse(ajax.responseText);
-						alert(obj.message);
+						//alert(obj.message); //Successfully logged out message
 
 						window.location.href = "index.php";
 					}else{

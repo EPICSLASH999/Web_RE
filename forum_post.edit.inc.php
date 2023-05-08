@@ -66,7 +66,7 @@
 
 						console.log(ajax.responseText);
 						let obj = JSON.parse(ajax.responseText);
-						alert(obj.message);
+						//alert(obj.message);
 
 						if(obj.success)
 							window.location.reload();

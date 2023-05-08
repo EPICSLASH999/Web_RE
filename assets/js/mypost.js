@@ -8,7 +8,9 @@ var mypost = {
 		e.preventDefault();
 		let text = document.querySelector(".js-post-input").value.trim();
 		if(text == ""){
-			alert("Please type something to post");
+			//alert("Please type something to post");
+			setPopup(2, "Please type something to post");
+			
 			return;
 		}
 
@@ -26,7 +28,7 @@ var mypost = {
 
 					//console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
-					alert(obj.message);
+					//alert(obj.message); //Successfully created post
 
 					if(obj.success){
 						document.querySelector(".js-post-input").value = "";
@@ -152,7 +154,7 @@ var mypost = {
 
 					//console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
-					alert(obj.message);
+					//alert(obj.message); //Successfully deleted post
 
 					if(obj.success){
 						window.location.reload();

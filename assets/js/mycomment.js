@@ -9,7 +9,8 @@ var mycomment = {
 		e.preventDefault();
 		let text = document.querySelector(".js-comment-input").value.trim();
 		if(text == ""){
-			alert("Please type something to post");
+			//alert("Please type something to post");
+			setPopup(2, "Please type something to post");
 			return;
 		}
 
@@ -28,7 +29,7 @@ var mycomment = {
 
 					console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
-					alert(obj.message);
+					//alert(obj.message); //Successfully created comment
 
 					if(obj.success){
 						document.querySelector(".js-comment-input").value = "";
@@ -163,7 +164,8 @@ var mycomment = {
 
 					//console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
-					alert(obj.message);
+					//alert(obj.message); //Successfully deleted comment
+					
 
 					if(obj.success){
 						window.location.reload();

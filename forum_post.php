@@ -46,6 +46,7 @@
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 		<link rel="stylesheet" type="text/css" href="css/login_register.css">
 		<link rel="stylesheet" type="text/css" href="css/scrollBar.css">
+		<link rel="stylesheet" type="text/css" href="css/popup.css">
 
 		<!-- Icons -->
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
@@ -79,6 +80,7 @@
 
 		<section class="class_1" >
 			<?php include('feature_navbar.inc.php') ?>
+			
 			<div class="class_11" >
 				<?php include('success.alert.inc.php') ?>
 				<?php include('fail.alert.inc.php') ?>
@@ -175,6 +177,7 @@
 			</div>
 			<br><br>
 			<?php include('feature_login&register.inc.php') ?>
+			<?php include('feature_popup.inc.php') ?> 
 			<?php include('forum_post.edit.inc.php') ?>
 		</section>
 		
@@ -217,8 +220,8 @@
 		var page_number = <?=$page?>;
 		var post_id = <?=$post_id?>;
 	</script>
-	<script src="./assets/js/mypost.js"></script>
-	<script src="./assets/js/mycomment.js"></script>
+	<script src="./assets/js/mypost.js?v2"></script>
+	<script src="./assets/js/mycomment.js?v2"></script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
