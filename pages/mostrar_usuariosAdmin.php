@@ -242,7 +242,7 @@ tbody:hover tr:hover td {
 					</label>
 					</form> </td>";    
 			echo "<td><form method='Post'> 
-					<input type='image' width=30 height=30 src='img/borrar.png' value='Borrar' onclick='return borrarUsuario(" . $ren['id'] . ")'>
+					<input type='image' width=30 height=30 src='../../assets/images/pages/admin/borrar.png' value='Borrar' onclick='return borrarUsuario(" . $ren['id'] . ")'>
 				</form> </td>";     
 			echo "</tr>";
 		}

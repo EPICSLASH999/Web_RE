@@ -1,0 +1,120 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text-color);
+    font-size: 1em;
+    background: url(../images/pages/admin/adminback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    color:azure;
+	font-family: 'Resident Evil', sans-serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00;
+  }
+  to {
+    text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00, 0 0 80px #00FF00;
+  }
+}
+
+@-moz-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00;
+  }
+  to {
+    text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00, 0 0 80px #00FF00;
+  }
+}
+@keyframes neon {
+	from {
+	   text-shadow:
+		  0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF00DE, 0 0 70px #FF00DE, 0 0 80px #FF00DE, 0 0 100px #FF00DE, 0 0 150px #FF00DE;
+	}
+	to {
+	   text-shadow:0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF00DE, 0 0 35px #FF00DE, 0 0 40px #FF00DE, 0 0 50px #FF00DE, 0 0 75px #FF00DE;
+	}
+ } 
+
+#btnInsertar {
+	background-color: brown;
+	border:0;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0, 0.2);
+	color:blanchedalmond;
+	font-size: 14px;
+	padding:1%;
+}
+#btnRecargar{
+	background-color: green;
+	border:0;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0, 0.2);
+	color:blanchedalmond;
+	background-image: url(../images/pages/admin/recargar.png);
+	background-size: 20px; /* ajustar el tamaño de la imagen según necesidad */
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 7%;
+	height: 7%;
+	float: right; /* Alinea el botón a la derecha */
+	margin-right: 19%; /* Agrega un margen de 18% a la derecha */
+}
+#mi_usu3, #btnBuscar {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+#btnBuscar{
+	background-color: blueviolet;
+	border:0;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0, 0.2);
+	color:blanchedalmond;
+	background-image: url(../images/pages/admin/lupa.png);
+	background-size: 20px; /* ajustar el tamaño de la imagen según necesidad */
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 4%;
+	height: 4%;
+}
+
+#cuadro{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #F5F5F5;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	opacity: 0.8;
+}
+#cuadro2{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #601515;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #cbc8c8;
+	opacity: 0.8;
+	width: 65%;
+}
+  

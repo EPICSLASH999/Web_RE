@@ -5,7 +5,7 @@ function funcionAdmin() {
 function llenarTablaAdmin(usuario){ 
     $.ajax({
         type: "GET",
-        url: "mostrar_usuariosAdmin.php",
+        url: "../mostrar_usuariosAdmin.php",
         data: {usu:usuario},  
 
         success: function (respuesta) {
