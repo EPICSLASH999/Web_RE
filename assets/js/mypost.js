@@ -29,6 +29,11 @@ var mypost = {
 					//console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
 					//alert(obj.message); //Successfully created post
+					setPopup(1, obj.message);
+
+					if (obj.message == "You can't do that, you are banned!"){
+						setPopup(2, obj.message);
+					}
 
 					if(obj.success){
 						document.querySelector(".js-post-input").value = "";

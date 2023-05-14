@@ -1,6 +1,6 @@
 
     <div class="popup" id="popup">
-        <img id="pImg" src="img/tick.png">
+        <img id="pImg" src="assets/images/popup/tick.png">
         <h2 id="pTitle">Thank You!</h2>
         <p id="pText">Your details have been successfully submitted. Thanks!</p>
         <button type="button" onclick="closePopup()">OK</button>
@@ -19,7 +19,7 @@
 
         function setPopup(type, text){
             if (type == 2){
-                document.getElementById("pImg").src="img/cross.png";
+                document.getElementById("pImg").src="assets/images/popup/cross.png";
                 document.getElementById("pTitle").innerHTML = "Whoops!";
             } 
             
