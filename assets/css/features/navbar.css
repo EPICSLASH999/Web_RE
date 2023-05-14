@@ -229,7 +229,7 @@ header{ /* Where Nav is located*/
     /* ----------------------- */
 }
 /* FOR CELLPHONES */
-/* MY CELLPHONE IS: 394px (width)*/
+/* MY CELLPHONE IS: 372px (width)*/
 @media (max-width: 520px){
     header{
         justify-content:space-between;
@@ -247,8 +247,8 @@ header{ /* Where Nav is located*/
     }
     .main a{
         margin-right: 15px;
-        margin-left: 8px;
-        font-size: 0.8rem;
+        margin-left: 4px;
+        font-size: 0.75rem;
     }
     .main .btnLogin-popup{
         width: 85px;
@@ -260,7 +260,6 @@ header{ /* Where Nav is located*/
         font-size: 11px;
     }
     .navbar li a{ /* For each word (a href) of the nav*/
-        
         font-size: 0.8rem;
         margin-left: 70%;
     }

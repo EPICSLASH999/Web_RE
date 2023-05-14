@@ -21,7 +21,7 @@
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/root_style.css">
         <link rel="stylesheet" type="text/css" href="assets/css/index_indexStyle.css?v1">
-        <link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css?v1">
+        <link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css?v2">
         <link rel="stylesheet" type="text/css" href="assets/css/features/login_register.css">
         <link rel="stylesheet" type="text/css" href="assets/css/features/scrollBar.css">
         <link rel="stylesheet" type="text/css" href="assets/css/features/popup.css">
