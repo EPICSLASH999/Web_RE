@@ -2,13 +2,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
-    <script src="./JQuery-3.6.3/jquery-3.6.3.min.js" type="application/javascript"></script>
-	<script type="text/javascript" src="./js/scriptAdmin.js" type="application/javascript"></script>
-    <script src="./js/scriptAdmin.js"> </script>
-    <link rel="stylesheet" href="css/estiloPost.css">
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script> -->
+    <script src="../../JQuery-3.6.3/jquery-3.6.3.min.js" type="application/javascript"></script>
+	
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v1"></script>
+
+	<!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/estilo2.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
+
 	<title> Administrador </title>
-    <link rel="stylesheet" type="text/css" href="css/scrollBar.css">
 </head>
 
 <!-- <body onload='funcionAdmin()'> -->
@@ -16,7 +20,7 @@
 
 
 <center><h2>Administra Post!</h2>
-	<img src="./img/icon.png" height="250" width="350">
+	<img src="../../assets/images/pages/admin/icon.png" height="250" width="350">
     <!-- SOLAMENTE SE REQUIERE ELIMINAR Y CONSULTAR EDI ATTE: Edi u.u -->
 
 	<!-- AQUI COMIENZA BOTON CONSULTAR -->
