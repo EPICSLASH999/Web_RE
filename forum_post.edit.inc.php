@@ -68,8 +68,10 @@
 						let obj = JSON.parse(ajax.responseText);
 						//alert(obj.message);
 
-						if(obj.success)
+						if(obj.success){
 							window.location.reload();
+							//setPopup(1, obj.message);
+						}
 					}else{
 						alert("Please check your internet connection");
 					}

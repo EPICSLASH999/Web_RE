@@ -18,7 +18,7 @@
     </ul>
 
     <div class="main">
-        <a href="#" class="games"><i class="ri-game-line"></i>Games</a>
+        <!-- <a href="#" class="games"><i class="ri-game-line"></i>Games</a> -->
         <a href="forum_main.php">Forum</a> 
         <?php if(logged_in()):?>
             <div >

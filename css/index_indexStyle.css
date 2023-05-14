@@ -38,3 +38,12 @@ section:nth-child(even) {
     background-size: cover;
     background-position: center;
 }
+
+/* MY CELLPHONE IS: 394px (width)*/
+@media only screen and (max-width: 600px) {
+    .sectionhome{
+        background: url(../img/background_cellphone.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

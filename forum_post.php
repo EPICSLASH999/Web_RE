@@ -46,7 +46,7 @@
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 		<link rel="stylesheet" type="text/css" href="css/login_register.css">
 		<link rel="stylesheet" type="text/css" href="css/scrollBar.css">
-		<link rel="stylesheet" type="text/css" href="css/popup.css">
+		<link rel="stylesheet" type="text/css" href="css/popup.css?v1">
 
 		<!-- Icons -->
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
