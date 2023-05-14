@@ -10,19 +10,6 @@
     --or-color: #b67c26;
 }
 
-/*body{
-    min-height: 100vh;
-    background: url(../img/search3.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: var(--text-color);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-
-
 *{
     margin: 0;
     padding: 0;
@@ -44,11 +31,8 @@
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    /*display: flex;*/
     justify-content: center;
     align-items: center;
-    /*overflow: hidden;*/
-    /*transform: scale(0);*/
 
 }
 

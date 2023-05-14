@@ -1,12 +1,5 @@
 body{
   min-height: 100vh;
-  
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-
-  /*color: black;*/
-  /*background-color: rgb(97, 86, 86);*/
 }
 
 *{
@@ -18,14 +11,11 @@ body{
 
   text-decoration: none;
   list-style: none;
-
-  /*color: #fff;*/
 }
 
 
 
 main {
-/*margin-left: 7rem;*/
 margin-left: 0rem;
 padding: 1rem;
 }

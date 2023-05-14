@@ -77,7 +77,6 @@
 .form-box h2{
     font-size: 2em;
     color: var(--text-color);
-    /*color: #640e2f;*/
     text-align: center;
 }
 
@@ -132,7 +131,6 @@
 }
 .input-box input:is(:focus, :valid) ~ label,
 .input-box input:is(:focus, :valid) ~ i{
-    /*color: var(--or-color);*/
     color: #640e2f;
 }
 .input-box i.icon{ /*This affects all icons of class="icon"*/

@@ -48,7 +48,6 @@ header{ /* Where Nav is located*/
 }
 .navbar li ul li{
     width: 100%;
-    /*border-bottom: 1px solid rgb(77, 9, 40);*/
     border-top: 1px solid rgb(77, 9, 40);
 
     background: var(--semi-transparent);
@@ -128,7 +127,6 @@ header{ /* Where Nav is located*/
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    /*margin-left: 40px;*/
     transition: .5s;
 
     justify-content: center;
@@ -185,7 +183,6 @@ header{ /* Where Nav is located*/
         right: -100%;
         width: 270px;
         height: 29vh;
-        /*background: var(--main-color);*/
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
