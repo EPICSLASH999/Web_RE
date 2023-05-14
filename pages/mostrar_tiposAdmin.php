@@ -29,7 +29,7 @@
 			echo "<td><strong>" . $ren['id'] . "</strong></td>";
 			echo "<td><strong>" . $ren['nombreTipo'] . "</strong></td>";		
 			echo "<td><form method='Post'> 
-					<input type='image' width=30 height=30 src='img/borrar.png' value='Borrar' onclick='return borrarTipo(" . $ren['id'] . ")'>
+					<input type='image' width=30 height=30 src='../../assets/images/pages/admin/borrar.png' value='Borrar' onclick='return borrarTipo(" . $ren['id'] . ")'>
 				</form> </td>";     
 			echo "</tr>";
 		}
