@@ -26,7 +26,7 @@ function funcionAdminPost(){
 function llenarTablaPost(post){
     $.ajax({
         type: "GET",
-        url: "mostrar_post.php",
+        url: "../mostrar_post.php",
         data: {pub:post},
         success: function (answer){
             $("#tablaPost").html(answer);
@@ -45,7 +45,7 @@ function funcionAdminPostC(){
 function llenarTablaPostC(post){
     $.ajax({
         type: "GET",
-        url: "mostrar_post.php",
+        url: "../mostrar_post.php",
         data: {pub:post},  
         success: function (respuesta) {
             $("#tablaPostC").html(respuesta);
@@ -63,7 +63,7 @@ function funcionAdminC() {
 function llenarTablaAdminC(usuario){ 
     $.ajax({
         type: "GET",
-        url: "mostrar_usuariosAdmin.php",
+        url: "../mostrar_usuariosAdmin.php",
         data: {usu:usuario},  
 
         success: function (respuesta) {
@@ -76,7 +76,7 @@ function llenarTablaAdminC(usuario){
     }); 
 }
 function borrarUsuario(id){
-    $.post("borrar_usuario.php",
+    $.post("../borrar_usuario.php",
     {
         id: id
     }, function() {
@@ -84,7 +84,7 @@ function borrarUsuario(id){
     });
 }
 function borrarPost(id){
-    $.post("borrar_post.php",
+    $.post("../borrar_post.php",
     {
         id: id
     }, function() {
@@ -92,7 +92,7 @@ function borrarPost(id){
     });
 }
 function banear(id){
-    $.post("banear.php",
+    $.post("../banear.php",
     {
         id: id
     }, function() {
@@ -100,7 +100,7 @@ function banear(id){
     });
 }
 function admin(id){
-    $.post("admin.php",
+    $.post("../admin.php",
     {
         id: id
     }, function() {
@@ -122,7 +122,7 @@ function insertarUsuario(){
                 x = this.responseText;
             }
         }
-        xmlhttp.open("POST", "insertar_usuario.php", true);
+        xmlhttp.open("POST", "../insertar_usuario.php", true);
         xmlhttp.send(datos_form);
     }
 }
@@ -144,7 +144,7 @@ function insertarObjeto(){
                 x = this.responseText;
             }
         }
-        xmlhttp.open("POST", "insertar_objeto.php", true);
+        xmlhttp.open("POST", "../insertar_objeto.php", true);
         xmlhttp.send(datos_form);
     }
 }
@@ -157,7 +157,7 @@ function funcionAdminCB() {
 function llenarTablaAdminB(objeto){ 
     $.ajax({
         type: "GET",
-        url: "mostrar_objetosAdmin.php",
+        url: "../mostrar_objetosAdmin.php",
         data: {obj:objeto},  
 
         success: function (respuesta) {
@@ -171,7 +171,7 @@ function llenarTablaAdminB(objeto){
 }
 
 function borrarObjeto(id){
-    $.post("borrar_objeto.php",
+    $.post("../borrar_objeto.php",
     {
         id: id
     }, function() {
@@ -186,7 +186,7 @@ function funcionObjeto() {
 function llenarTablaObjeto(objeto){ 
     $.ajax({
         type: "GET",
-        url: "mostrar_objetosAdmin.php",
+        url: "../mostrar_objetosAdmin.php",
         data: {obj:objeto},  
 
         success: function (respuesta) {
@@ -215,7 +215,7 @@ function insertarTipo(){
                 x = this.responseText;
             }
         }
-        xmlhttp.open("POST", "insertar_Tipo.php", true);
+        xmlhttp.open("POST", "../insertar_Tipo.php", true);
         xmlhttp.send(datos_form);
     }
 }
@@ -226,7 +226,7 @@ function funcionTipo() {
 function llenarTablaTipo(tipo){ 
     $.ajax({
         type: "GET",
-        url: "mostrar_tiposAdmin.php",
+        url: "../mostrar_tiposAdmin.php",
         data: {tip:tipo},  
 
         success: function (respuesta) {
@@ -239,7 +239,7 @@ function llenarTablaTipo(tipo){
     }); 
 }
 function borrarTipo(id){
-    $.post("borrar_tipo.php",
+    $.post("../borrar_tipo.php",
     {
         id: id
     }, function() {
@@ -254,7 +254,7 @@ function funcionTipo() {
 //Selector
 
 function crearSelectorTipo() {
-    $.get("crearSelector_tipo.php", function (respuesta, status) {
+    $.get("../crearSelector_tipo.php", function (respuesta, status) {
         $("#lugarSelectorTipo").html(respuesta);
     });
 }
@@ -268,7 +268,7 @@ function llamarTipo(dato){
     // AJAX
     $.ajax({
            type: "GET",
-           url: "consultaPlaca.php",
+           url: "../consultaPlaca.php",
            data: {q:dato},  
 
            success: function (respuesta) {

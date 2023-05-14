@@ -2,10 +2,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
-    <script src="./JQuery-3.6.3/jquery-3.6.3.min.js" type="application/javascript"></script>
-	<script type="text/javascript" src="./js/scriptAdmin.js" type="application/javascript"></script>
-    <script src="./js/scriptAdmin.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script> -->
+    <script src="../../JQuery-3.6.3/jquery-3.6.3.min.js" type="application/javascript"></script>
+	
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v1"></script>
     
 	<title> Administrador2 </title>
     

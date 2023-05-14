@@ -42,7 +42,7 @@
 			echo "<td><strong>" . $ren['descripcion'] . "</strong></td>";
 			echo "<td><strong>" . $ren['tipo'] . "<strong></td>";			
 			echo "<td><form method='Post'> 
-					<input type='image' width=30 height=30 src='img/borrar.png' value='Borrar' onclick='return borrarObjeto(" . $ren['id'] . ")'>
+					<input type='image' width=30 height=30 src='../../assets/images/pages/admin/borrar.png' value='Borrar' onclick='return borrarObjeto(" . $ren['id'] . ")'>
 				</form> </td>";     
 			echo "</tr>";
 		}
