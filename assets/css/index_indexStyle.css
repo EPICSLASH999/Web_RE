@@ -34,7 +34,7 @@ section:nth-child(even) {
 /* This is specifically for the section with the class "sectionhome" */
 .sectionhome{
     font-size: 1em;
-    background: url(../img/background.jpg);
+    background: url(../images/pages/index/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -42,7 +42,7 @@ section:nth-child(even) {
 /* MY CELLPHONE IS: 394px (width)*/
 @media only screen and (max-width: 600px) {
     .sectionhome{
-        background: url(../img/background_cellphone.jpg);
+        background: url(../images/pages/index/background_cellphone.jpg);
         background-size: cover;
         background-position: center;
     }

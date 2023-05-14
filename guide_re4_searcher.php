@@ -6,10 +6,10 @@
         <title>Resident Evil 4</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/sideBarStyle.css" />
-        <link rel="stylesheet" type="text/css" href="css/guide_liveSearchStyle.css?v1">
-        <link rel="stylesheet" type="text/css" href="css/guide_re4_searcher_Style.css">
-        <link rel="stylesheet" type="text/css" href="css/scrollBar.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/features/sideBarStyle.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/guide_liveSearchStyle.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/guide_re4_searcher_Style.css?v1">
+        <link rel="stylesheet" type="text/css" href="assets/css/features/scrollBar.css">
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet"/>

@@ -39,14 +39,14 @@
 			
 		<title>Single post - Forum</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css?v4">
+		<link rel="stylesheet" type="text/css" href="assets/css/forum_styles.css?v4">
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/root_style.css">
-		<link rel="stylesheet" type="text/css" href="css/navbar.css">
-		<link rel="stylesheet" type="text/css" href="css/login_register.css">
-		<link rel="stylesheet" type="text/css" href="css/scrollBar.css">
-		<link rel="stylesheet" type="text/css" href="css/popup.css?v1">
+		<link rel="stylesheet" type="text/css" href="assets/css/root_style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/features/login_register.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/features/scrollBar.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/features/popup.css">
 
 		<!-- Icons -->
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
