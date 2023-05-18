@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css">
+    <link rel="stylesheet" href="assets/css/controlAdmin.css?v2">
 
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
@@ -40,13 +41,39 @@
 
 <body>
 
+<style>
+    main{
+        margin-top: 11%;
+
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+</style>
+
     <?php include('feature_navbar.inc.php') ?> 
 
-    <br><br><br><br><br>
-    <h1>Hello, <?= $_SESSION['USER']['username']?>!</h1>
-    <hr>
-    <br>
-    <span>Feel free to edit me!</span>
+    <main>
+        <h1>Hello, <?= $_SESSION['USER']['username']?>!</h1>
+        <hr>
+        <br>
+    </main>
+
+    <!-- Botones -->
+    <div class="button-container btnCU">
+        <button id="btnCU" class="button" onclick="window.location='pages/admin/access_admin.php';">Control de Usuarios</button>
+    </div>
+
+    <div class="button-container btnCP">
+        <button id="btnCP" class="button" onclick="window.location='pages/admin/access_adminPost.php';">Control de Publicaciones</button>
+    </div>
+
+    <div class="button-container btnCO">
+        <button id="btnCO" class="button" onclick="window.location='pages/admin/access_admin2.php';">Control de Objetos</button>
+    </div>
+
+    <div class="button-container btnCT">
+        <button id="btnCT" class="button" onclick="window.location='pages/admin/access_admin3.php';">Control de Tipos</button>
+    </div>
 
 </body>
 

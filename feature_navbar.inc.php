@@ -20,7 +20,9 @@
     <div class="main">
         <?php if(logged_in()):?>
             <?php if($_SESSION['USER']['admin'] == 1):?>
-            <a href="admin_main.php" class="games"><i class="ri-game-line"></i>Admin</a>
+                
+                <a href=<?php if(!isset($_SESSION['recaptcha'])):?> "pages/admin/admin_recaptcha.php" <?php else:?> "admin_main.php" <?php endif;?> class="games"><i class="ri-game-line"></i>Admin</a>
+                
             <?php endif;?>
         <?php endif;?>
         <a href="forum_main.php">Forum</a> 

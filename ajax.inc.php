@@ -318,6 +318,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 		logout();
 		$info['message'] = "You were successfuly logged out";
 
+		session_destroy();
+
 	}
 	
 
