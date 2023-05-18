@@ -21,7 +21,9 @@
             if (type == 2){
                 document.getElementById("pImg").src="assets/images/popup/cross.png";
                 document.getElementById("pTitle").innerHTML = "Whoops!";
-            } 
+            } else{
+                document.getElementById("pImg").src="assets/images/popup/tick.png";
+            }
             
             document.getElementById("pText").innerHTML = text;
 

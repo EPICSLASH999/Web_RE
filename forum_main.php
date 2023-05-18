@@ -20,7 +20,7 @@
 		
 		<!-- Original -->
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/forum_styles.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/forum_styles.css?v1">
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="assets/css/root_style.css">
@@ -65,8 +65,7 @@
 			<section class="class_1" >
 				<?php include('feature_navbar.inc.php') ?>
 				<?php include('feature_login&register.inc.php') ?>
-				<?php include('feature_popup.inc.php') ?> 
-
+				
 				<div class="class_11" >
 					<?php include('success.alert.inc.php') ?>
 					<?php include('fail.alert.inc.php') ?>
@@ -145,6 +144,8 @@
 			<!--end post card template-->
 		</div>
 		
+		
+		<?php include('feature_popup.inc.php') ?> 
 		
 	
 	</body>
