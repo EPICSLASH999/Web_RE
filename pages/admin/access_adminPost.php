@@ -7,6 +7,10 @@
 
 	if($page < 1)
 		$page = 1;
+	if ($_SESSION['USER']['admin'] != 1) {
+		header("Location: index.php");
+		exit();
+	}
 ?>
 <html>
 <head>
@@ -66,7 +70,6 @@
 			<br>
 		</form>
 	</div>
-
 <div id="tablaP">
         <div id="tablaPost" ><b>[ La informacion de los 'Posts' se debera mostrar aqui ]</b></div>
 </div>

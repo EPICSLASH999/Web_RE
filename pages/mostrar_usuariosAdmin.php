@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Mostrar Usuarios</title>
     <style>
     
 	/* Aplicar estilos básicos para el input checkbox */
@@ -104,7 +104,7 @@
 	width: 800px;
     }	
 th {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #777);
+	background: linear-gradient(#777, #777);
 	border-left: 1px solid #555;
 	border-right: 1px solid #777;
 	border-top: 1px solid #555;
@@ -152,12 +152,9 @@ td:first-child {
 td:last-child {
 	border-right: 1px solid #e8e8e8;
 	box-shadow: inset -1px 0 0 #fff;
-}	
-tr {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png);	
 }
 tr:nth-child(odd) td {
-	background: #856868 url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+	background: #856868;	
 }
 
 tr:last-of-type td {
@@ -193,6 +190,11 @@ tbody:hover tr:hover td {
 
     $con = new PDO('mysql:host=localhost;dbname=re_db', $DB_USER, $DB_PASS);
     $usu = $_GET['usu'];
+
+	session_start(); 
+    if (isset($_SESSION['USER']['username'])) {
+        $segusuario = $_SESSION['USER']['username'];
+    }
 
     if (!$con) {
         die('No se pudo conectar: ' . mysqli_error($con));              
@@ -241,9 +243,13 @@ tbody:hover tr:hover td {
 					<span class='slider2'></span>
 					</label>
 					</form> </td>";    
-			echo "<td><form method='Post'> 
+			if ($ren['username'] != $segusuario) {
+				echo "<td><form method='Post'> 
 					<input type='image' width=30 height=30 src='../../assets/images/pages/admin/borrar.png' value='Borrar' onclick='return borrarUsuario(" . $ren['id'] . ")'>
-				</form> </td>";     
+				</form> </td>";  
+			} else {
+				echo "<td></td>";
+			}    
 			echo "</tr>";
 		}
 		

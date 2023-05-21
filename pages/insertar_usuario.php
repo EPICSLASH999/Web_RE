@@ -25,7 +25,7 @@
 
          //parametros
          $sql->bindParam(':usu', $usu);
-         $sql->bindParam(':pass', $pass);
+         $sql->bindParam(':pass', $password_hash);
          $sql->bindParam(':cor', $cor);
          $sql->bindParam(':nivel', $nivel);
          //ejecutar

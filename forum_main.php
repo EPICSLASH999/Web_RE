@@ -64,7 +64,7 @@
 		<div class="container">
 			<section class="class_1" >
 				<?php include('feature_navbar.inc.php') ?>
-				<?php include('feature_login&register.inc.php') ?>
+				
 				
 				<div class="class_11" >
 					<?php include('success.alert.inc.php') ?>
@@ -144,7 +144,7 @@
 			<!--end post card template-->
 		</div>
 		
-		
+		<?php include('feature_login&register.inc.php') ?>
 		<?php include('feature_popup.inc.php') ?> 
 		
 	

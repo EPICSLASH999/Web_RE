@@ -46,7 +46,7 @@ function get_image($path)
 	if(!empty($path) && file_exists($path))
 		return $path;
 
-	return 'assets/images/user.jpg?v1';
+	return 'assets/images/user.jpg';
 }
 
 function i_own_post($row)

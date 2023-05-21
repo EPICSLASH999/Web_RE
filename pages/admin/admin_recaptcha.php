@@ -1,7 +1,13 @@
 <?php
-	
+// Verificar si el usuario ha iniciado sesión y no es administrador
+session_start(); 
+if ($_SESSION['USER']['admin'] != 1) {
+    header("Location: index.php");
+    exit();
+}
+?>
+<?php
 	require('../../config.inc.php'); //This imports the connection to database
-	require('../../functions.php');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["recaptcha"] = "true";

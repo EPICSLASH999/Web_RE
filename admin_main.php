@@ -1,14 +1,15 @@
 <?php
-	
 	require('config.inc.php'); //This imports the connection to database
 	require('functions.php');
-
 	$page = $_GET['page'] ?? 1;
 	$page = (int)$page;
-
 	if($page < 1)
 		$page = 1;
-
+    // Verificar si el usuario ha iniciado sesión y no es administrador
+    if ($_SESSION['USER']['admin'] != 1) {
+        header("Location: index.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>

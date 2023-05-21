@@ -7,6 +7,10 @@
 
 	if($page < 1)
 		$page = 1;
+	if ($_SESSION['USER']['admin'] != 1) {
+		header("Location: index.php");
+		exit();
+	}
 ?>
 <html>
 <head>
@@ -39,7 +43,12 @@
 
 <body onload='funcionAdmin()'>
 <?php include('../feature_adminNavbar.inc.php') ?> 
-<center><h2>Administrador</h2>
+	<main>
+        <center> <h2>Administrador, <?= $_SESSION['USER']['username']?>!</h> </center>
+        <hr>
+        <br>
+    </main>
+<center>
 	<img src="../../assets/images/pages/admin/icon.png" height="250" width="350">
 	<!-- AQUI COMIENZA EL CUADRO DE INSERTAR -->
 	<div id="cuadro">
@@ -71,7 +80,8 @@
         <div id="tablaUsuarios" ><b>[ La informacion de la persona se mostrara aqui (Admin)]</b></div>
 </div>
 </center>
-<input class="prueba" type="button" name="botonConsulta" id="btnRecargar" onclick="return funcionAdmin()"> 
+<input class="prueba" type="button" name="botonConsulta" id="btnRecargar" onclick="return funcionAdmin()">
+
 <br>
 <br>
 </body>

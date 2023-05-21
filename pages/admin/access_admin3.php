@@ -7,6 +7,10 @@
 
 	if($page < 1)
 		$page = 1;
+	if ($_SESSION['USER']['admin'] != 1) {
+    header("Location: index.php");
+    exit();
+}
 ?>
 <html>
 <head>

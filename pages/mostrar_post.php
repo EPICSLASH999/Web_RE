@@ -6,35 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    
-	/* Aplicar estilos básicos para el input checkbox */
-	.switch input[type="checkbox"] {
-	display: none;
-	}
-
-	/* Estilos para el slider */
-	.switch .slider {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-	background-color: #ccc;
-	border-radius: 34px;
-	transition: background-color 0.3s;
-	}
-
-	/* Estilos para el indicador */
-	.switch .slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	border-radius: 50%;
-	transition: transform 0.3s;
-	}
 
 strong {
 	font-weight: bold; 
@@ -55,7 +26,6 @@ strong {
 	width: 800px;
     }	
 th {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #777);
 	border-left: 1px solid #555;
 	border-right: 1px solid #777;
 	border-top: 1px solid #555;
@@ -104,11 +74,8 @@ td:last-child {
 	border-right: 1px solid #e8e8e8;
 	box-shadow: inset -1px 0 0 #fff;
 }	
-tr {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png);	
-}
 tr:nth-child(odd) td {
-	background: #856868 url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+	background: #856868;	
 }
 
 tr:last-of-type td {
@@ -132,34 +99,33 @@ tbody:hover td {
 tbody:hover tr:hover td {
 	color: #DFDFD6;
 }
-    </style>
+</style>
+
 </head>
 
 <body>
 <?php   
 	$DB_USER = 'master';
     $DB_PASS = '1234';
-
     $con = new PDO('mysql:host=localhost;dbname=re_db', $DB_USER, $DB_PASS);
-              
     $pub = $_GET['pub'];
-
     if (!$con) {
         die('No se pudo conectar: ' . mysqli_error($con));              
     }
-
+    
     if ($pub == null){
-		$sql = $con->prepare("SELECT * FROM posts");
+        // Consulta modificada para obtener los últimos 10 resultados y contar el número total de registros
+		$sql = $con->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT 10");
         $sql->execute();
-        
     } else {
-        $sql = $con->prepare("SELECT * FROM posts WHERE post = :pub");
+        $sql = $con->prepare("SELECT * FROM posts WHERE post = :pub LIMIT 10");
         $sql->bindParam(':pub', $pub);
         $sql->execute();  
-		
-
     }                
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);                      
+
+    
+	
 
     /*************  Genera la tabla respuesta ************************/
     echo "<table>
@@ -188,11 +154,8 @@ tbody:hover tr:hover td {
 				</form> </td>";     
 			echo "</tr>";
 		}
-		
     echo "</tbody>
     </table>";
-
-    $con = null;
 ?>
 </body>
 </html>
