@@ -3,7 +3,7 @@
 	require('../../functions.php');
 
 	if ($_SESSION['USER']['admin'] != 1) {
-		header("Location: index.php");
+		header("Location: ../../index.php");
 		exit();
 	}
 ?>
@@ -39,6 +39,9 @@
                 }
                     
             ?>
+
+            <br><br>
+            <button onclick="window.location.href='../../index.php'">Volver</button>
         </center>
     
     </body>

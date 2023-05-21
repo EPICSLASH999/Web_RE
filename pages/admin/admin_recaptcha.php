@@ -2,7 +2,7 @@
 // Verificar si el usuario ha iniciado sesión y no es administrador
 session_start(); 
 if ($_SESSION['USER']['admin'] != 1) {
-    header("Location: index.php");
+    header("Location: ../../index.php");
     exit();
 }
 ?>
