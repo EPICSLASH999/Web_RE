@@ -295,7 +295,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 
 		if(!$row)
 		{
-			$info['message'] = "Wrong email or password";
+			$info['message'] = "Email not registered";
 		}else
 		{
 			$row = $row[0];
@@ -307,7 +307,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 				authenticate($row);
 				$info['message'] = "Successful login";
 			}else{
-				$info['message'] = "Wrong email or password";
+				$info['message'] = "Wrong password";
 			}
 
 		}

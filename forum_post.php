@@ -93,7 +93,7 @@
 					<div id="post_<?=$row['id']?>" row="<?=htmlspecialchars(json_encode($row))?>" class="class_42" >
 						
 						<a href="profile.php?id=<?=$row['user']['id'] ?? 0?>" class="class_45" >
-							<img src="<?=isset($row['user']['image'])? $row['user']['image']: get_image('assets/images/user.jpg')?>" class="class_47" >
+							<img src="<?=$row['user']['image'] ?? get_image('assets/images/user.jpg')?>" class="class_47" >
 							<h2 class="class_48" style="font-size:16px"  >
 								<?=$row['user']['username'] ?? 'Unknown'?>
 							</h2>
