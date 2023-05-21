@@ -84,8 +84,11 @@ var mycomment = {
 								template.querySelector(".js-username").innerHTML = (typeof obj.rows[i].user == 'object') ? obj.rows[i].user.username : 'User';
 								template.querySelector(".js-profile-link").href = (typeof obj.rows[i].user == 'object') ? 'profile.php?id='+obj.rows[i].user.id : '#';
 								
-								if(typeof obj.rows[i].user == 'object')
+								template.querySelector(".js-image").src = (typeof obj.rows[i].user == 'object') ? obj.rows[i].user.image : "assets/images/user.jpg";
+
+								/*if(typeof obj.rows[i].user == 'object'){
 									template.querySelector(".js-image").src = obj.rows[i].user.image;
+								}*/
 
 								let clone = template.cloneNode(true);
 								clone.setAttribute('id','post_'+obj.rows[i].id);
