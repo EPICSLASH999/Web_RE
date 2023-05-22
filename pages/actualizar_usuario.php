@@ -3,7 +3,16 @@
    $banned = $_POST['banned'];
    echo "ID: " . $id . "<br>";
    echo "Banned: " . $banned . "<br>";
-   $con = mysqli_connect('localhost','master','1234');
+
+   require('../config.inc.php'); //This imports the connection to database
+
+	//conexion
+   $DB_USER = DB_USER;
+   $DB_PASS = DB_PASS;
+	$DB_NAME = DB_NAME;
+	$DB_HOST = DB_HOST;
+   
+   $con = mysqli_connect($DB_HOST,$DB_USER,$DB_PASS);
    if (!$con){
       die('No se pudo conectar: ' . mysqli_error($con)); 
    }

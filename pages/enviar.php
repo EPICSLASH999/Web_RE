@@ -5,7 +5,16 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 $correo = $_POST['correo'];
-$con = mysqli_connect('localhost','master','1234');
+
+require('../config.inc.php'); //This imports the connection to database
+
+//conexion
+$DB_USER = DB_USER;
+$DB_PASS = DB_PASS;
+$DB_NAME = DB_NAME;
+$DB_HOST = DB_HOST;
+
+$con = mysqli_connect($DB_HOST,$DB_USER,$DB_PASS);
 
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 function generate_string($input, $strength = 16) {

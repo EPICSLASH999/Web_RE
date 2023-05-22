@@ -100,12 +100,22 @@
 <body>
 
 <?php   
-	//conexion
-    $DB_USER = 'master';
-    $DB_PASS = '1234';
+	require('../config.inc.php'); //This imports the connection to database
+	require('../functions.php');
 
-    $con = new PDO('mysql:host=localhost;dbname=re_db', $DB_USER, $DB_PASS);
+	//conexion
+    $DB_USER = DB_USER;
+    $DB_PASS = DB_PASS;
+	$DB_NAME = DB_NAME;
+	$DB_HOST = DB_HOST;
+
+    $con = new PDO('mysql:host='.$DB_HOST.';dbname='.$DB_NAME, $DB_USER, $DB_PASS);
     $usu = $_GET['usu'];
+
+	$segusuario = '';
+	if (isset($_SESSION['USER']['username'])) {
+        $segusuario = $_SESSION['USER']['username'];
+    }
 
     if (!$con) {
         die('No se pudo conectar: ' . mysqli_error($con));              
@@ -117,7 +127,7 @@
     } else if ($usu == null){
 		echo '';
 		return;
-	}else {
+	} else {
 		$usu = $usu . '%';
 		$sql = $con->prepare("SELECT * FROM users WHERE username LIKE :usu");
         $sql->bindParam(':usu', $usu);
@@ -162,9 +172,13 @@
 					<span class='slider2'></span>
 					</label>
 					</form> </td>";    
-			echo "<td><form method='Post'> 
+			if ($ren['username'] != $segusuario) {
+				echo "<td><form method='Post'> 
 					<input type='image' width=30 height=30 src='../../assets/images/pages/admin/borrar.png' value='Borrar' onclick='return borrarUsuario(" . $ren['id'] . ")'>
-				</form> </td>";     
+				</form> </td>";  
+			} else {
+				echo "<td></td>";
+			}    
 			echo "</tr>";
 		}
 		

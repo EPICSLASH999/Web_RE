@@ -20,9 +20,9 @@
         <title>Safe-Zone</title>
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/root_style.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/index_indexStyle.css?v3">
-        <link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css?v2">
-        <link rel="stylesheet" type="text/css" href="assets/css/features/login_register.css?v1">
+        <link rel="stylesheet" type="text/css" href="assets/css/index_indexStyle.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/features/navbar.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/features/login_register.css">
         <link rel="stylesheet" type="text/css" href="assets/css/features/scrollBar.css">
         <link rel="stylesheet" type="text/css" href="assets/css/features/popup.css">
         
@@ -37,7 +37,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- MISC -->
-        <link rel="manifest" href="./manifest.json?v3">
+        <link rel="manifest" href="./manifest.json">
 
     </head>
     
@@ -125,7 +125,7 @@ Juntos, seguiremos celebrando y disfrutando del legado de Resident Evil.</p>
         
         <!-- JS SCRIPTS -->
         <script src="./assets/js/scroll.js"></script>
-        <script src="app.js?v1"></script>
+        <!--<script src="app.js"></script>-->
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

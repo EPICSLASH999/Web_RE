@@ -58,10 +58,15 @@ tbody:hover tr:hover td {
 
 <body>
 <?php   
-	$DB_USER = 'master';
-    $DB_PASS = '1234';
-
-    $con = new PDO('mysql:host=localhost;dbname=re_db', $DB_USER, $DB_PASS);
+	require('../config.inc.php'); //This imports the connection to database
+    
+    //conexion
+    $DB_USER = DB_USER;
+    $DB_PASS = DB_PASS;
+    $DB_NAME = DB_NAME;
+    $DB_HOST = DB_HOST;
+    
+    $con = new PDO('mysql:host='.$DB_HOST.';dbname='.$DB_NAME, $DB_USER, $DB_PASS);
               
     $pub = $_GET['pub'];
 

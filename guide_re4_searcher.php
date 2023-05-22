@@ -20,8 +20,7 @@
     </head>
 
     <body>
-        <?php include('feature_sidebar.inc.php') ?>
-
+        
         <div class="container">
             <h2>What you lookin'?</h2>
             <br><br>
@@ -30,6 +29,8 @@
             </div>
             <div id="searchresult" class="searchres"></div>
         </div>
+
+        <?php include('feature_sidebar.inc.php') ?>
 
         <!-- JS SCRIPTS-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -57,5 +58,6 @@
             });
         </script>
         <!-- END CODE FOR SEARCH BOX -->
+        
     </body>
 </html>

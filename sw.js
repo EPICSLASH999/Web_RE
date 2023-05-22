@@ -26,9 +26,14 @@ self.addEventListener('install', e => {
                 './app.js',
                 './manifest.json',
 
+                './functions.php',
+                './ajax.inc.php',
                 'forum_main.php',
                 'guide_re4_main.php',
-                'guide_re4_searcher.php'
+                'guide_re4_searcher.php',
+                './liveSearch.php',
+
+                './JQuery-3.6.3/jquery-3.6.3.min.js'
             ]);
             
         });
@@ -54,7 +59,7 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('fetch', e => {
-
+    
     // 2- Cache with Network Fallback
     const respuesta = caches.match( e.request )
         .then( res => {
@@ -63,10 +68,10 @@ self.addEventListener('fetch', e => {
 
             // No existe el archivo
             // tengo que ir a la web
-            console.log('No existe', e.request.url);
+            console.log('No existe, extrayendo:', e.request.url);
 
-            return fetch(e.request).then(newResp => {
-
+            return fetch(e.request).then(newResp => {   
+                
                 caches.open ( CACHE_DYNAMIC_NAME )
                     .then(cache => {
                         cache.put(e.request, newResp);
@@ -79,6 +84,8 @@ self.addEventListener('fetch', e => {
     e.respondWith(respuesta);
 
 });
+
+
 
 // Escuchar PUSH
 /*

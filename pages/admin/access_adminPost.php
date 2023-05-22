@@ -26,7 +26,7 @@
 	<title> Administrador </title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/access_adminPost.sass">
+	<link rel="stylesheet" href="../../assets/css/access_adminPost.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">

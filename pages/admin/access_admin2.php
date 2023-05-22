@@ -22,7 +22,7 @@
 	<!-- JS -->
 	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v1"></script>
     <!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/access_admin2.sass">
+	<link rel="stylesheet" href="../../assets/css/access_admin2.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">
