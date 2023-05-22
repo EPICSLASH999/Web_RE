@@ -12,7 +12,7 @@
         <li><a href="#">Guide</a>
             <ul>
                 <li><a href="guide_re4_main.php">Resident Evil 4</a></li>
-                <li><a href="#">Resident Evil 4 Remake</a></li>
+                <!--<li><a href="#">Resident Evil 4 Remake</a></li>-->
             </ul>
         </li>
     </ul>

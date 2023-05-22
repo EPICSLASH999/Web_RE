@@ -36,6 +36,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+        <!-- MISC -->
+        <link rel="manifest" href="./manifest.json?v3">
+
     </head>
     
     <body>
@@ -122,6 +125,7 @@ Juntos, seguiremos celebrando y disfrutando del legado de Resident Evil.</p>
         
         <!-- JS SCRIPTS -->
         <script src="./assets/js/scroll.js"></script>
+        <script src="app.js?v1"></script>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
