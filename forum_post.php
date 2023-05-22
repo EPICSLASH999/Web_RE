@@ -220,8 +220,8 @@
 		var page_number = <?=$page?>;
 		var post_id = <?=$post_id?>;
 	</script>
-	<script src="./assets/js/mypost.js?v2"></script>
-	<script src="./assets/js/mycomment.js?v3"></script>
+	<script src="./assets/js/mypost.js?v3"></script>
+	<script src="./assets/js/mycomment.js?v4"></script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

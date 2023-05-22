@@ -38,6 +38,9 @@ function logout(){
 
 	if(!empty($_SESSION['USER']))
 		unset($_SESSION['USER']);
+	
+		
+	session_destroy();
 
 }
 
@@ -65,3 +68,12 @@ function i_own_profile($row)
 	return false;
 }
 
+function i_still_exist($userid){
+	
+	$query = "select * from users where id = '$userid' limit 1";
+	$row = query($query);
+	if(!$row){
+		return false;
+	} 
+	return true;
+}

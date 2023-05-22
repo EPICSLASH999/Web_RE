@@ -62,14 +62,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 	}else
 	if($_POST['data_type'] == 'add_post')
 	{
-		
-		//check if banned
 		$userid = $_SESSION['USER']['id'];
+
+		//check if account has not been deleted while in sesion
+		if(!i_still_exist($userid)){
+			logout();
+			$info['success'] = true;
+			$info['message'] = "expired";
+			
+			goto finished;
+		} 
+
+		//check if banned
 		$query = "select * from users where id = '$userid' limit 1";
 		$row = query($query);
 		if($row && $row[0]['banned'] == 'true'){
 			$info['success'] = true;
-			$info['message'] = "You can't do that, you are banned!";
+			$info['message'] = "banned";
 			
 			
 		} else{
@@ -99,13 +108,29 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 	if($_POST['data_type'] == 'add_comment')
 	{
 		
-		//check if banned
 		$userid = $_SESSION['USER']['id'];
+
+		//check if account has not been deleted while in sesion
+		if(!i_still_exist($userid)){
+			logout();
+			$info['success'] = true;
+			$info['message'] = "expired";
+			
+			goto finished;
+		} 
+
+		//check if account has not been deleated while in sesion
+		if(!i_still_exist($userid)){
+			logout();
+			return;
+		}
+
+		//check if banned
 		$query = "select * from users where id = '$userid' limit 1";
 		$row = query($query);
 		if($row && $row[0]['banned'] == 'true'){
 			$info['success'] = true;
-			$info['message'] = "You can't do that, you are banned!";
+			$info['message'] = "banned";
 			
 			
 		} else{
@@ -318,11 +343,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['data_type']))
 		logout();
 		$info['message'] = "You were successfuly logged out";
 
-		session_destroy();
-
 	}
 	
 
 }
-
+finished:
 echo json_encode($info);

@@ -2,7 +2,7 @@
 
 <!-- START OF NAVBAR -->
 <header>
-    <a href="../../index.php" class="logo"><i class="ri-home-heart-fill"></i><span>Logo</span></a>
+    <a href="../../index.php" class="logo"><i class="ri-home-heart-fill"></i><span>Sekai-RE</span></a>
 
     <ul class="navbar">
         <li><a href="../../admin_main.php" class="active">Control</a></li> 

@@ -155,7 +155,7 @@
 		var page_number = <?=$page?>;
 		var home_page = true;
 	</script>
-	<script src="./assets/js/mypost.js?v3"></script>
+	<script src="./assets/js/mypost.js?v4"></script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

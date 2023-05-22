@@ -29,11 +29,18 @@ var mypost = {
 					//console.log(ajax.responseText);
 					let obj = JSON.parse(ajax.responseText);
 					//alert(obj.message); //Successfully created post
-					setPopup(1, obj.message);
+					
 
-					if (obj.message == "You can't do that, you are banned!"){
-						setPopup(2, obj.message);
+					if (obj.message == "banned"){
+						setPopup(2, "You can't do that, you are banned!");
+					} else if (obj.message == "expired"){
+						//setPopup(2, "Your account has expired, refresh the page!");
+						alert("Your account has expired");
+						location.reload();
+					} else{
+						setPopup(1, obj.message);
 					}
+					
 
 					if(obj.success){
 						document.querySelector(".js-post-input").value = "";

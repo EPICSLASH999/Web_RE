@@ -31,6 +31,16 @@ var mycomment = {
 					let obj = JSON.parse(ajax.responseText);
 					//alert(obj.message); //Successfully created comment
 
+					if (obj.message == "banned"){
+						setPopup(2, "You can't do that, you are banned!");
+					} else if (obj.message == "expired"){
+						//setPopup(2, "Your account has expired, refresh the page!");
+						alert("Your account has expired");
+						location.reload();
+					} else{
+						setPopup(1, obj.message);
+					}
+					
 					if(obj.success){
 						document.querySelector(".js-comment-input").value = "";
 						mycomment.load_comments();
