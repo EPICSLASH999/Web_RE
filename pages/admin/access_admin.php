@@ -20,7 +20,7 @@
     <script src="../../JQuery-3.6.3/jquery-3.6.3.min.js" type="application/javascript"></script>
 
 	<!-- JS -->
-	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v2"></script>
+	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v3"></script>
     
 	<!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/access_admin.sass">

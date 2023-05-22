@@ -114,8 +114,12 @@
 		$sql = $con->prepare("SELECT * FROM users");
         $sql->execute();
   
-    } else {
-		$sql = $con->prepare("SELECT * FROM users WHERE username= :usu");
+    } else if ($usu == null){
+		echo '';
+		return;
+	}else {
+		$usu = $usu . '%';
+		$sql = $con->prepare("SELECT * FROM users WHERE username LIKE :usu");
         $sql->bindParam(':usu', $usu);
         $sql->execute();  
 

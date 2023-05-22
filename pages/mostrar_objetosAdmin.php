@@ -17,11 +17,15 @@
         re4_objetos.tipo = re4_tipos.id");
         $sql->execute();
 
-    } else {
+    } else if ($obj == null){
+        echo '';
+		return;
+    }else {
+        $obj = $obj . '%';
         $sql = $con->prepare("SELECT re4_objetos.id, re4_objetos.nombre,re4_objetos.descripcion,re4_tipos.nombreTipo FROM
         re4_objetos,re4_tipos
         WHERE
-        re4_objetos.tipo = re4_tipos.id AND nombre= :obj");
+        re4_objetos.tipo = re4_tipos.id AND nombre LIKE :obj");
         $sql->bindParam(':obj', $obj);
         $sql->execute();  
     }                
@@ -29,6 +33,7 @@
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);               
     if(!$result){
         echo "<h5 align='center'>Not found</h5>"; 
+        $con = null;
         return;
     }
     /*************  Genera la tabla respuesta ************************/

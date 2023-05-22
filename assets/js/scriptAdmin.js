@@ -1,5 +1,5 @@
 function funcionAdmin() { 
-    var usuario = "";
+    var usuario = 0;
     llenarTablaAdmin(usuario);
 }
 function cargarTablaUsuario() {
@@ -190,7 +190,7 @@ function borrarObjeto(id){
 }
 
 function funcionObjeto() { 
-    var objeto = "";
+    var objeto = 0;
     llenarTablaObjeto(objeto);
 }
 function llenarTablaObjeto(objeto){ 

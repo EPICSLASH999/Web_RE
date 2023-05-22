@@ -45,7 +45,7 @@
 </head>
 
 <!-- <body onload='funcionAdmin()'> -->
-<body onload='funcionAdminPost()'> 
+<body onload='llenarPost()'> 
 <?php include('../feature_adminNavbar.inc.php') ?>
 
 <div class="login-wrap">

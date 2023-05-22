@@ -73,8 +73,12 @@ tbody:hover tr:hover td {
 		$sql = $con->prepare("SELECT * FROM posts ORDER BY date DESC LIMIT 5");
         $sql->execute();
         
-    } else {
-        $sql = $con->prepare("SELECT * FROM posts WHERE post = :pub");
+    } else if ($pub == null){
+		echo '';
+		return;
+	}else{
+		$pub = $pub . '%';
+        $sql = $con->prepare("SELECT * FROM posts WHERE post LIKE :pub");
         $sql->bindParam(':pub', $pub);
         $sql->execute();  
 		
@@ -83,6 +87,7 @@ tbody:hover tr:hover td {
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);   
 	if(!$result){
         echo "<h5 align='center'>Not found</h5>"; 
+		$con = null;
         return;
     }                   
 
