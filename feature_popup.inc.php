@@ -23,6 +23,7 @@
                 document.getElementById("pTitle").innerHTML = "Whoops!";
             } else{
                 document.getElementById("pImg").src="assets/images/popup/tick.png";
+                document.getElementById("pTitle").innerHTML = "Thank You!";
             }
             
             document.getElementById("pText").innerHTML = text;
