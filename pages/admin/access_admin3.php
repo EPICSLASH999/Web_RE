@@ -25,7 +25,7 @@
 	<title> Administrador2 </title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/estilo2.css">
+	<link rel="stylesheet" href="../../assets/css/access_admin3.sass">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">
@@ -44,25 +44,43 @@
 <body onload="funcionTipo()">
 <?php include('../feature_adminNavbar.inc.php') ?>
 
-<h1>Insertar tipos</h1>
-<!-- Insertar tipos -->
-<div>
-		<form id="formularioT" method="Post">
+<div class="principal">
+	<div class="login-box">
+		<h1>Insertar tipos</h1>
+		<br>
+		<!-- Insertar tipos -->
+		<div class="user-box">
+			<form id="formularioT" method="Post">
+				<div class="user-box">
+					<input type="text" name="tip" id="mi_tipoo" required="">
+					<label>Nombre</label>
+				</div>
 
-			<label>Nombre: </label><br><input type="text" name="tip"  id="mi_tipoo" required=""><br>
-			<label>Id: </label><br><input type="number" name="id" id="mi_id" required=""><br><br>
+				<div class="user-box">
+					<input type="number" name="id" id="mi_id" required="">
+					<label>Id</label>
+				</div>
+				<br>
+				
+				<div class="button">
+					<button class="button-85" role="button" type="submit" id="btnInsertar" name="boton"  onclick="insertarTipo()">Insertar</button>
+				</div>
+			</form>
+			
+		</div>
+		<br>
 
-		<input type="submit" id="btnInsertar" name="boton" value="Insertar" onclick="return insertarTipo()"> 
-		</form>
+
+		<!-- Mostrar tipos -->
+		<div class="tabla" id="tabla">
+				<div id="tablaTipos2" ><b>[ La informacion de los tipos se mostrara aqui (Admin)]</b></div><br>
+		</div>
+		<br>
+		<div class="button">
+			<button class="button-85" role="button" onclick="return funcionTipo()">Recargar</button>
+		</div>
+	</div>
 </div>
-
-
-<!-- Mostrar tipos -->
-<div id="tabla">
-        <div id="tablaTipos2" ><b>[ La informacion de los tipos se mostrara aqui (Admin)]</b></div>
-</div>
-<button onclick="return funcionTipo()">Recargar</button>
-
 
 </body>
 </html>

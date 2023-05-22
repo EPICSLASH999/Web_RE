@@ -10,13 +10,40 @@ body{
 /* THE SECTIONS PART */
 section {
     min-height: 100vh;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     background: #1f242d;
     font-size: 100px;
     color: #fff;
     font-weight: 700;
+}
+
+section h1 {
+    color: rgb(195, 40, 101);
+    text-align: center;
+    padding-top: 10px;
+
+}
+section p{
+    font-size: 20px;
+    padding-right: 4%;
+    padding-left: 4%;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+section h3{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+section h4{
+    font-size: 25px;
+    text-align: left;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-left: 4%;
+
 }
 
 section:nth-child(even) { 
@@ -31,7 +58,9 @@ section:nth-child(even) {
     background-size: cover;
     background-position: center;
 }
-
+.sectionhome p{
+    font-size: 1rem;
+}
 /* MY CELLPHONE IS: 394px (width)*/
 @media only screen and (max-width: 600px) {
     .sectionhome{

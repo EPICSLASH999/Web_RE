@@ -51,7 +51,7 @@ INSERT INTO `posts` (`id`, `user_id`, `post`, `date`, `parent_id`, `comments`) V
 (7, 1, 'Ashley is best character. Change my mind!!', '2023-04-30 13:20:30', 0, 3),
 (8, 4, 'Yes she is !!!', '2023-04-30 23:25:30', 7, 0),
 (9, 2, 'Absoltuely', '2023-04-30 23:59:30', 7, 0),
-(10, 3, 'Totaly agreed', '2023-04-30 23:59:42', 7, 0);
+(10, 3, 'Totally agreed', '2023-04-30 23:59:42', 7, 0);
 
 -- --------------------------------------------------------
 

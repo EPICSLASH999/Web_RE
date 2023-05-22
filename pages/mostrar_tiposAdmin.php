@@ -17,8 +17,8 @@
     echo "<table>
     <thead>
         <tr>
-            <th>id</th>
-			<th>nombreTipo</th>
+            <th>Id</th>
+			<th>Tipo</th>
         </tr>
         </thead>
         <tbody>";

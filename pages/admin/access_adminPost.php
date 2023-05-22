@@ -26,7 +26,7 @@
 	<title> Administrador </title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/estilo2.css">
+	<link rel="stylesheet" href="../../assets/css/access_adminPost.sass">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">
@@ -48,34 +48,44 @@
 <body onload='funcionAdminPost()'> 
 <?php include('../feature_adminNavbar.inc.php') ?>
 
-<center><h2>Administra Post!</h2>
-	<img src="../../assets/images/pages/admin/icon.png" height="250" width="350">
-    <!-- SOLAMENTE SE REQUIERE ELIMINAR Y CONSULTAR EDI ATTE: Edi u.u -->
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+			<label for="tab-1" class="tab">Buscar post</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up">
+			<label for="tab-2" class="tab">Latest posts</label>
 
-	<!-- AQUI COMIENZA BOTON CONSULTAR -->
-	<br>
-	<div id="cuadro2">
-	<h1> Consultar Post's </h1>
-		<form id="formularioPost" method="Post">
-			Posts: <input type="text" name="post" id="mi_post"> 
-            
-            <!-- <input class="prueba" type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminC()"> -->
-            <input class="prueba" type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminPostC()">  
-			 
-			<br>
-            <!-- <div id="tabla2"> <div id="tablaUsuarios2" > </div> <br> </div> -->
-			<div id="tablaPC">
-				<div id="tablaPostC" ></div> <br>
+		<div class="login-form">
+			<!-- AQUI COMIENZA BOTON CONSULTAR -->
+			<div class="sign-in-htm">
+				<form id="formularioPost" method="Post">
+					<div class='group'>
+						<label class='label'>Posts</label><input type="text" class='input' name="post" id="mi_post"> 
+					</div>
+					<!-- <input class="prueba" type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminC()"> -->
+					<div class='group'>
+					<input class='button' value='Buscar' type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminPostC()">  
+					</div>
+					
+					<!-- <div id="tabla2"> <div id="tablaUsuarios2" > </div> <br> </div> -->
+					<div id="tablaPC">
+						<div id="tablaPostC" ></div>
+					</div>
+					<br>
+				</form>
 			</div>
-			<br>
-		</form>
+	
+			<div class="sign-up-htm">
+				<div id="tablaP">
+					<div id="tablaPost" ><b>[ La informacion de los 'Posts' se debera mostrar aqui ]</b></div>
+				</div>
+				<br><br>
+				<div class='group'>
+					<input class="button" value ='Recargar' type="button" name="botonConsulta" id="btnRecargar" onclick="return llenarPost()"> 
+				</div>
+			</div>
+		</div>
 	</div>
-<div id="tablaP">
-        <div id="tablaPost" ><b>[ La informacion de los 'Posts' se debera mostrar aqui ]</b></div>
 </div>
-</center>
-<input class="prueba" type="button" name="botonConsulta" id="btnRecargar" onclick="return funcionAdminPost()"> 
-<br>
-<br>
 </body>
 </html>

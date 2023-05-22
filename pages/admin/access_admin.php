@@ -23,7 +23,7 @@
 	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v2"></script>
     
 	<!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/estilo2.css">
+	<link rel="stylesheet" href="../../assets/css/access_admin.sass">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">
@@ -41,48 +41,75 @@
 	<title> Administrador </title>
 </head>
 
-<body onload='funcionAdmin()'>
+<body onload='cargarTablaUsuario()'>
 <?php include('../feature_adminNavbar.inc.php') ?> 
-	<main>
-        <center> <h2>Administrador, <?= $_SESSION['USER']['username']?>!</h> </center>
-        <hr>
-        <br>
-    </main>
-<center>
-	<img src="../../assets/images/pages/admin/icon.png" height="250" width="350">
+
+
+<!-- Las pestanas de arriba -->
+
+<div class="login-wrap">
+
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+	<label for="tab-1" class="tab">Agregar usuario</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up">
+	<label for="tab-2" class="tab">Consultar usuario</label>
+	
+
+
+<div class="login-form">
+	
+
 	<!-- AQUI COMIENZA EL CUADRO DE INSERTAR -->
-	<div id="cuadro">
-		<h1> Agregar Usuarios </h1>
+		<div class="sign-in-htm">
 		<form id="formulario" method="Post">
-			<label>Usuario: </label><br><input type="text" name="usu"  id="mi_usu" required=""><br>
-			<label>Correo: </label><br><input type="text" name="cor"  id="mi_cor" required=""><br>
-			<label>Contraseña: </label><br><input type="text" name="pass" id="mi_pass" required=""><br>
-			<label>¿Sera administrador? </label><br><input type="checkbox" name="esAdmin"/> <br>
-		<input type="submit" id="btnInsertar" name="boton" value="Insertar" onclick="return insertarUsuario()"> 
-		</form>
-	</div>
+		<div class='group'>
+			<label class='label'>Usuario</label><input type="text" class='input' name="usu"  id="mi_usu" required="">
+		</div>	
+		<div class='group'>
+			<label class='label'>Correo</label><input type="text" class='input' name="cor"  id="mi_cor" required="">
+		</div>
+		<div class='group'>
+		<label class='label'>Contraseña</label><input type="text" class='input' name="pass" id="mi_pass" required="">
+		</div>
+		<div class='group' align="center">
+		<label class='switch'>
+		<label class='label'>Sera administrador</label><br><input type="checkbox" name="esAdmin"/>
+		<span class='slider'></span>
+		</label>
+		</div>
+		<br>
+		<div class='group'>
+		<input type="submit" class='button' id="btnInsertar" name="boton" value="Insertar" onclick="return insertarUsuario()"> 
+		</div>
+			</form>
+		</div>
+	
 	<!-- AQUI COMIENZA BOTON CONSULTAR -->
-	<br>
-	<div id="cuadro2">
-	<h1> Consultar usuarios </h1>
+	<div class="sign-up-htm">
 		<form id="formularioC" method="Post">
-			Usuario:<input type="text" name="usu" id="mi_usu3"> 
-			<input class="prueba" type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminC()"> 
+			<div class='group'>
+				<label class='label'>Usuario<input type="text" class='input' name="usu" id="mi_usu3"> 
+			</div>
+			<div class='group'>
+			<input class="button" value = "Buscar" type="button" name="botonConsulta" id="btnBuscar"  onclick="return funcionAdminC()"> 
+			</div>
 			<br>
 			<div id="tabla2">
 				<div id="tablaUsuarios2" ></div> <br>
 			</div>
 			<br>
 		</form>
-	</div>
-	<!-- AQUI COMIENZA LA TABLA DE USUARIOS NORMAL -->
-<div id="tabla">
-        <div id="tablaUsuarios" ><b>[ La informacion de la persona se mostrara aqui (Admin)]</b></div>
-</div>
-</center>
-<input class="prueba" type="button" name="botonConsulta" id="btnRecargar" onclick="return funcionAdmin()">
 
-<br>
-<br>
+		<div id="tabla" class='tabla'>
+        <div id="tablaUsuarioss" ><b>[ La informacion de la persona se mostrara aqui (Admin)]</b></div>
+		</div><br>
+	<!-- AQUI COMIENZA LA TABLA DE USUARIOS NORMAL -->
+	<div class='group'>
+<input class="button" value="recargar" type="button" name="botonConsulta" id="btnRecargar" onclick="return funcionAdmin()"> 
+</div>
+</div>
+</div>
+
 </body>
 </html>

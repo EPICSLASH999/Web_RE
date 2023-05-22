@@ -1,0 +1,189 @@
+body {
+    background: url("../images/pages/admin/claire_leon.jpg");
+    background-size: cover;
+
+}
+.principal{
+    
+    size: 30%;
+    align-content: center;
+    
+    width: 30%;
+    height: 100%;
+    padding-left: 5%;
+    
+    
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(94, 109, 143);
+    text-align: center;
+}
+table {
+    display: block;
+    color: rgb(119, 138, 181);
+    align-items: center;
+    align-self: center;
+    
+    
+    border-collapse: collapse;
+  }
+ 
+  thead {
+    padding: 20%;
+    border: 1px solid black;
+    
+    
+  }
+  td{
+    padding: 5px 10px;
+    border: 1px solid black;
+    width: 100%;
+    text-aline: center;
+    
+  }
+  th{
+    
+    }
+  .button{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+      
+
+
+  /* CSS Button */
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative; //QUEEEEEEEEEEEE
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    align-items: center;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    
+  }
+  /* Textbox  /*/
+
+.login-box {
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  width: 25%;
+  padding: 2.5%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.655);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+.tabla{
+   height: 200px; /* establecer una altura para el div */
+  overflow-y: scroll; /* agregar una barra de desplazamiento vertical */
+  
+  }
+
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: rgb(255, 107, 187);
+  font-size: 12px;
+}
+
+
+

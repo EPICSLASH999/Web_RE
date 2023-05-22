@@ -22,7 +22,7 @@
 	<!-- JS -->
 	<script type="text/javascript" src="../../assets/js/scriptAdmin.js?v1"></script>
     <!-- CSS -->
-	<link rel="stylesheet" href="../../assets/css/estilo2.css">
+	<link rel="stylesheet" href="../../assets/css/access_admin2.sass">
     <link rel="stylesheet" type="text/css" href="../../assets/css/root_style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/scrollBar.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/features/navbar.css">
@@ -41,31 +41,50 @@
     
 </head>
 
-<body onload="funcionObjeto(); crearSelectorTipo();">
+<body onload="CargarTablaObjeto(); crearSelectorTipo();">
 <?php include('../feature_adminNavbar.inc.php') ?>
+<!-- Las pestanas de arriba -->
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+			<label for="tab-1" class="tab">Agregar Objeto</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up">
+			<label for="tab-2" class="tab">Consultar Objeto</label>
 
-		<h1> Agregar Objeto </h1>
-<!-- Insertar objetos -->
-<div>
-	<div id="lugarSelectorTipo"> Lugar donde sale el selector</div>
-</div>
-<!-- Consultar objetos -->
-<div>
-		<form id="formularioC" method="Post">
-			Objeto a consultar:<input type="text" name="obj" id="mi_objeto"> <br>
-			<input class="prueba" type="button" name="botonConsulta" id="btnBuscar" value="Buscar" onclick="return funcionAdminCB()"> 
-			<br>
-			<div id="tabla2B">
-				<div id="tablaObjetos" ></div> <br>
+		<div class="login-form">
+			<!-- Solo el sign-in -->
+			<div class="sign-in-htm">
+				<div>
+					<div id="lugarSelectorTipo"> Lugar donde sale el selector</div>
+				</div>
+			</div>	
+			<!-- Solo el sign-ip -->
+			<div class="sign-up-htm">
+				<form id="formularioC" method="Post">
+					<div class='group'>
+						<label class='label'>Objeto a consultar:</label><input placeholder="Nombre del objeto" class='input' type="text" name="obj" id="mi_objeto">
+					</div>
+					<div class='group'>
+						<input class="button" type="button" name="botonConsulta" id="btnBuscar" value="Buscar" onclick="return funcionAdminCB()"> 
+					</div>
+					<div id="tabla2B">
+						<div id="tablaObjetos" ></div> <br>
+					</div>
+					<br>
+				</form>
+				
+				<div class='tabla' id="tabla">
+						<div id="tablaObjetos2" ><b>[ La informacion de la persona se mostrara aqui (Admin)]</b></div>
+				</div><br>
+				<div class='group'>
+					<input type='button' class="button" value='recargar' onclick="return funcionObjeto()">
+				</div>
 			</div>
-			<br>
-		</form>
-</div>
-<!-- Mostrar objetos -->
-<div id="tabla">
-        <div id="tablaObjetos2" ><b>[ La informacion de la persona se mostrara aqui (Admin)]</b></div>
+
+		</div>
+	</div>
 </div>
 
-<button onclick="return funcionObjeto()">Recargar</button>
+
 </body>
 </html>

@@ -58,7 +58,7 @@
                     <i class="uil uil-eye-slash showHidePw"></i>
                 </div>
                 <div class="remember-forgot">
-                    <label><input type="checkbox"> 
+                    <label><input type="checkbox" required> 
                     I agree to the terms & conditions</label>
                 </div>
                 <button type="submit" class="btn">Register</button>

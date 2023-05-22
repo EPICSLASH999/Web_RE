@@ -2,6 +2,10 @@ function funcionAdmin() {
     var usuario = "";
     llenarTablaAdmin(usuario);
 }
+function cargarTablaUsuario() {
+    var usuario = 0;
+    llenarTablaAdmin(usuario);
+}
 function llenarTablaAdmin(usuario){ 
     $.ajax({
         type: "GET",
@@ -9,11 +13,11 @@ function llenarTablaAdmin(usuario){
         data: {usu:usuario},  
 
         success: function (respuesta) {
-            $("#tablaUsuarios").html(respuesta);
+            $("#tablaUsuarioss").html(respuesta);
         },
         
         error: function (e) {
-            $("#tablaUsuarios").text("error:"+e.status+"error:"+e.statusText);
+            $("#tablaUsuarioss").text("error:"+e.status+"error:"+e.statusText);
         }
     }); 
 }
@@ -22,6 +26,12 @@ function funcionAdminPost(){
     var post = "";
     llenarTablaPost(post);
 }
+function llenarPost(){
+    var post = 0;
+    llenarTablaPost(post);
+}
+
+
 
 function llenarTablaPost(post){
     $.ajax({
@@ -198,6 +208,11 @@ function llenarTablaObjeto(objeto){
         }
     }); 
 }
+function CargarTablaObjeto(){
+    var objeto = 0;
+    llenarTablaObjeto(objeto);
+}
+
 //Codigo tipos
 
 function insertarTipo(){
@@ -279,4 +294,14 @@ function llamarTipo(dato){
                $("#result").text("error:"+e.status+"error:"+e.statusText);
            }
        }); 
+}
+function cargarPagina(page) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("tablaPost").innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("GET", "access_adminPost.php?page=" + page, true);
+    xmlhttp.send();
 }
