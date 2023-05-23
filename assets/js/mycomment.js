@@ -95,6 +95,8 @@ var mycomment = {
 								template.querySelector(".js-profile-link").href = (typeof obj.rows[i].user == 'object') ? 'profile.php?id='+obj.rows[i].user.id : '#';
 								
 								template.querySelector(".js-image").src = (typeof obj.rows[i].user == 'object') ? obj.rows[i].user.image : "assets/images/user.jpg";
+								
+								(obj.rows[i].user.admin == 1) ? template.querySelector(".js-icon").classList.add('ri-vip-crown-line') : template.querySelector(".js-icon").classList.remove('ri-vip-crown-line');
 
 								/*if(typeof obj.rows[i].user == 'object'){
 									template.querySelector(".js-image").src = obj.rows[i].user.image;

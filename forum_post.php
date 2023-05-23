@@ -97,6 +97,9 @@
 							<h2 class="class_48" style="font-size:16px"  >
 								<?=$row['user']['username'] ?? 'Unknown'?>
 							</h2>
+							<?php if($row['user']['admin'] == 1):?>
+								<i class="js-icon ri-vip-crown-line"></i>
+							<?php endif;?>
 						</a>
 						<div class="class_49" >
 							<h4 class="class_41"  >
@@ -190,6 +193,7 @@
 					<h2 class="js-username class_48" style="font-size:16px" >
 						Jane Name
 					</h2>
+					<i class="js-icon"></i>
 				</a>
 				<div class="class_49" >
 					<h4 class="js-date class_41"  >
@@ -220,8 +224,8 @@
 		var page_number = <?=$page?>;
 		var post_id = <?=$post_id?>;
 	</script>
-	<script src="./assets/js/mypost.js?v3"></script>
-	<script src="./assets/js/mycomment.js?v4"></script>
+	<script src="./assets/js/mypost.js?v4"></script>
+	<script src="./assets/js/mycomment.js?v5"></script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -123,6 +123,7 @@
 					<h2 class="js-username class_48" style="font-size:16px" >
 						Jane Name
 					</h2>
+					<i class="js-icon"></i>
 				</a>
 				<div class="class_49" >
 					<h4 class="js-date class_41"  >
@@ -155,7 +156,7 @@
 		var page_number = <?=$page?>;
 		var home_page = true;
 	</script>
-	<script src="./assets/js/mypost.js?v4"></script>
+	<script src="./assets/js/mypost.js?v5"></script>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

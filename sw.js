@@ -60,18 +60,36 @@ self.addEventListener('install', e => {
 
 self.addEventListener('fetch', e => {
     
+    
     // 2- Cache with Network Fallback
     const respuesta = caches.match( e.request )
-        .then( res => {
+    .then( res => {
 
-            if ( res ) return res;
+        // Esto es para recargar constantemente estas paginas
+        // y que no las tome del cache
+        // A fin de actualziar las paginas con cambios
+        if (e.request.url.includes('index.php') 
+        || e.request.url.includes('forum_main.php')
+        || e.request.url.includes('forum_post.php')
+        || e.request.url.includes('profile.php')
+        
+        || e.request.url.includes('access_admin.php')
+        || e.request.url.includes('access_admin2.php')
+        || e.request.url.includes('access_admin3.php')
+        || e.request.url.includes('access_adminPost.php')
 
-            // No existe el archivo
-            // tengo que ir a la web
-            console.log('No existe, extrayendo:', e.request.url);
+        || e.request.url.includes('mostrar_objetosAdmin.php')
+        || e.request.url.includes('mostrar_post.php')
+        || e.request.url.includes('mostrar_tiposAdmin.php')
+        || e.request.url.includes('mostrar_usuariosAdmin.php')
 
+        || e.request.url.includes('crearSelector_tipo.php')
+        
+        )
+        {
+            
             return fetch(e.request).then(newResp => {   
-                
+            
                 caches.open ( CACHE_DYNAMIC_NAME )
                     .then(cache => {
                         cache.put(e.request, newResp);
@@ -79,9 +97,28 @@ self.addEventListener('fetch', e => {
                 
                 return newResp.clone();
             });
+        } 
+        if ( res ) return res;
+
+        // No existe el archivo
+        // tengo que ir a la web
+        //console.log('No existe, extrayendo:', e.request.url);
+
+        return fetch(e.request).then(newResp => {   
+            
+            caches.open ( CACHE_DYNAMIC_NAME )
+                .then(cache => {
+                    cache.put(e.request, newResp);
+                });
+            
+            return newResp.clone();
         });
+    });
 
     e.respondWith(respuesta);
+    
+
+    
 
 });
 

@@ -125,7 +125,7 @@ Juntos, seguiremos celebrando y disfrutando del legado de Resident Evil.</p>
         
         <!-- JS SCRIPTS -->
         <script src="./assets/js/scroll.js"></script>
-        <!--<script src="app.js"></script>-->
+        <script src="app.js"></script>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -97,8 +97,11 @@ var mypost = {
 								template.querySelector(".js-username").innerHTML = (typeof obj.rows[i].user == 'object') ? obj.rows[i].user.username : 'User';
 								template.querySelector(".js-profile-link").href = (typeof obj.rows[i].user == 'object') ? 'profile.php?id='+obj.rows[i].user.id : '#';
 								
-								if(typeof obj.rows[i].user == 'object')
-									template.querySelector(".js-image").src = obj.rows[i].user.image;
+								template.querySelector(".js-image").src = (typeof obj.rows[i].user == 'object') ? obj.rows[i].user.image : "assets/images/user.jpg";
+								/*if(typeof obj.rows[i].user == 'object')
+									template.querySelector(".js-image").src = obj.rows[i].user.image;*/
+
+								(obj.rows[i].user.admin == 1) ? template.querySelector(".js-icon").classList.add('ri-vip-crown-line') : template.querySelector(".js-icon").classList.remove('ri-vip-crown-line');
 
 								let clone = template.cloneNode(true);
 								clone.setAttribute('id','post_'+obj.rows[i].id);
